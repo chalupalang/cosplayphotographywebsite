@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosplay Photography Portfolio</title>
+  <meta name="description" content="Cosplay photography portfolio — convention and local shoots.">
+
+  <!-- Fonts: Baloo 2 for headings (bubbly), Quicksand for body (rounded, easy to read) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Drifting sparkle field, sits behind everything -->
+  <div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="logo">✧ kaylah | juno ✧</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#featured">Favorites</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Book a Shoot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-bubbles" id="heroBubbles" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-kicker">cosplay &amp; convention photography</p>
+        <h1 class="hero-title">
+          <span class="wobble" style="--d:0s">capture</span>
+          <span class="wobble" style="--d:0.15s">the</span>
+          <span class="wobble" style="--d:0.3s">happiness</span>
+        </h1>
+        <p class="hero-sub">Local shoots, convention sessions, or stage performances~ Browse the gallery below or book a shoot!</p>
+        <a href="#gallery" class="btn btn-primary">See the gallery ↓</a>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED ===== -->
+    <section id="featured" class="featured-section">
+      <h2 class="section-title">✧ favorites ✧</h2>
+      <p class="section-sub">Take a gander...hehe...these are few of my top picks!</p>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Generated automatically from photos where featured: true -->
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="gallery-section">
+      <h2 class="section-title">the gallery</h2>
+      <p class="section-sub">Tap a filter to browse, tap a photo to zoom in.</p>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="local">Local</button>
+        <button class="filter-pill" data-filter="convention">Convention</button>
+        <button class="filter-pill" data-filter="stage">Stage/Performance</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Photo cards are generated from js/photos-data.js — see that file to add your 60 photos -->
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section">
+      <div class="about-photo">
+        <img src="images/about-me.jpg" alt="Portrait of the photographer" loading="lazy">
+        <span class="about-photo-sparkle">✦</span>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title left">Wazzupp, it's me :3</h2>
+        <p>
+          Helloooo! My name is Kaylah, also known as Juno. I am a student at the University of Tennessee Knoxville studying business! I started cosplay in June 2022,
+          and cosplay photography in April 2024! I started out with local shoots, which are still one of my favorite types of photoshoots.
+          Cosplay photography holds a special part in my life because it's what really brought me into the cosplay community. Before I started photography, I would just
+          cosplay at home, or when I went to conventions I would just aimlessly wander around alone. But since I've started photography, I've been able to meet so many
+          new friends, actually have fun at cons, and also grow my experience and skills in photography.
+        
+          Please feel free to contact me and chat, ask me anything, book a shoot, or give me feedback on my photos! I love to hear from people, and I am always open
+          to constructive criticism, comments, concerns, etc etc... Hit me up!
+        </p>
+        <p>
+        </p>
+        <div class="about-tags">
+          <span>📷 Canon Rebel T7 </span>
+          <span>📍 Knoxville, TN </span>
+          <span>⏱ 1-2 week turnaround </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">let's shoot togetherrrrr!</h2>
+      <p class="section-sub">Feel free to reach out to me in email or DMs — tell me your character, the con or location, your date, and any other infoo :3 </p>
+      <div class="contact-card">
+        <a href="mailto:youremail@example.com" class="contact-link">
+          <span class="contact-icon">✉</span> klang4@vols.utk.edu
+        </a>
+        <div class="socials">
+          <a href="www.instagram.com/xuehuapics" class="social-pill" target="_blank" rel="noopener noreferrer">instagram ^.^</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+<p>made with ✧ love ✧ &amp; maybe too many sparkle emojis hehehe— © <span id="year"></span> Kaylah | Juno</p>  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/photos-data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
